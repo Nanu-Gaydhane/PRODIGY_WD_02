@@ -8,16 +8,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <div class="stopwatch" role="region" aria-label="Stopwatch">
-        <h1 tabindex="0">Stopwatch</h1>
-        <div id="display" role="timer" aria-live="off" aria-atomic="true" tabindex="0">00:00:00:00</div>
-        <div class="controls" role="group" aria-label="Stopwatch controls">
-            <button id="start" aria-label="Start stopwatch" tabindex="0"><i class="fas fa-play" aria-hidden="true"></i></button>
-            <button id="pause" aria-label="Pause stopwatch" tabindex="0"><i class="fas fa-pause" aria-hidden="true"></i></button>
-            <button id="reset" aria-label="Reset stopwatch" tabindex="0"><i class="fas fa-redo" aria-hidden="true"></i></button>
-            <button id="lap" aria-label="Record lap" tabindex="0"><i class="fas fa-flag" aria-hidden="true"></i></button>
+    <div class="stopwatch">
+        <h1>Stopwatch</h1>
+        <div id="display">00:00:00:00</div>
+        <div class="controls">
+            <button id="start"><i class="fas fa-play"></i></button>
+            <button id="pause"><i class="fas fa-pause"></i></button>
+            <button id="reset"><i class="fas fa-redo"></i></button>
+            <button id="lap"><i class="fas fa-flag"></i></button>
         </div>
-        <ul id="laps" aria-live="polite" aria-relevant="additions" tabindex="0"></ul>
+        <ul id="laps"></ul>
     </div>
     <script src="script.js"></script>
 </body>
