@@ -1,0 +1,132 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url('pexels-laura-tancredi-7078634.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #333;
+}
+
+.stopwatch {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 30px 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    max-width: 400px;
+    width: 90%;
+    transition: box-shadow 0.3s ease;
+}
+
+.stopwatch:hover {
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 2.5rem;
+    margin-bottom: 25px;
+    color: #222;
+}
+
+#display {
+    font-size: 3.5rem;
+    font-weight: 600;
+    margin-bottom: 30px;
+    letter-spacing: 3px;
+    font-family: 'Courier New', Courier, monospace;
+    color: #111;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.controls button {
+    background-color: #007bff;
+    border: none;
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.4);
+    color: white;
+    font-size: 1.3rem;
+}
+
+.controls button:disabled {
+    background-color: #a0c8ff;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+.controls button:hover:not(:disabled) {
+    background-color: #0056b3;
+    transform: scale(1.1);
+}
+
+.controls button:active:not(:disabled) {
+    transform: scale(0.95);
+}
+
+.controls button i {
+    pointer-events: none;
+}
+
+#laps {
+    list-style-type: none;
+    padding: 0;
+    max-height: 150px;
+    overflow-y: auto;
+    border-top: 1px solid #ddd;
+}
+
+#laps li {
+    padding: 8px 10px;
+    border-bottom: 1px solid #eee;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1rem;
+    color: #444;
+    opacity: 0;
+    animation: fadeInUp 0.4s forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 400px) {
+    .stopwatch {
+        padding: 20px 25px;
+        max-width: 280px;
+    }
+
+    #display {
+        font-size: 2.5rem;
+    }
+
+    .controls button {
+        width: 45px;
+        height: 45px;
+        font-size: 1.1rem;
+    }
+}
